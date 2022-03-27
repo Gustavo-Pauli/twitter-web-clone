@@ -6,7 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    color: var(--white);
+    color: var(--primary);
   }
 
   html, body #root {
@@ -24,15 +24,16 @@ export default createGlobalStyle`
   }
   
   html {
-    background: var(--primary);
+    background: var(--background);
   }
 
   :root {
-    --primary: #000;
+    --background: #000;
+    --primary: #D9D9D9;
     --secondary: #15181C;
     --search: #202327;
-    --white: #D9D9D9;
-    --gray: #7A7A7A;
+    // --white: #D9D9D9;
+    --gray: #71767B;
     --outline: #2F3336;
     --retweet: #00C06B;
     --like: #E8265E;
@@ -42,7 +43,7 @@ export default createGlobalStyle`
     --button-hover: #eff3f41a
   }
 
-  .rotate90Left {
+  .Rotate90Left {
     transform: rotate(-90deg);
   }
 `;

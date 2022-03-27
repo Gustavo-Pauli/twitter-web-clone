@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, ProfileInfo, BackIcon } from './styles';
+import { Container, Header, ProfileMiniHeader, BackIcon, BottomMenu, HomeIcon, ExploreIcon, NotificationsIcon, MessagesIcon} from './styles';
 
 // import { Container } from './styles';
 
@@ -11,20 +11,29 @@ const ProfileMain: React.FC = () => {
           <BackIcon />
         </button>
 
-        <ProfileInfo>
+        <ProfileMiniHeader>
           <strong>Gustavo Pauli</strong>
           <span>612 Tweets</span>
-        </ProfileInfo>
+        </ProfileMiniHeader>
       </Header>
 
       {/* <ProfilePage /> */}
 
-      {/* <BottomMenu>
-        <HomeIcon />
-        <ExploreIcon />
-        <NotificationsIcon />
-        <MessagesIcon />
-      </BottomMenu> */}
+      {/* TODO: just show bottom menu if on mobile*/}
+      <BottomMenu>
+        <button>
+          <HomeIcon />
+        </button>
+        <button>
+          <ExploreIcon />
+        </button>
+        <button>
+          <NotificationsIcon />
+        </button>
+        <button>
+          <MessagesIcon />
+        </button>
+      </BottomMenu>
     </Container>
   );
 }

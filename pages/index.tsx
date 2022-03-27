@@ -15,7 +15,6 @@ const Home: NextPage = () => {
 
       <GlobalStyles />
       <Layout />
-      teste
       
     </div>
   )
