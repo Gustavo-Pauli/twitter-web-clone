@@ -47,7 +47,7 @@ const ProfileHeader: React.FC = () => {
 
         <div>
           <h1>Gustavo Pauli</h1>
-          <h2>@GustavoPauli</h2>
+          <h2>@Gustavo_ps</h2>
         </div>
 
         <p>Self-taught 📚. Learning to be a Full Stack developer.</p>

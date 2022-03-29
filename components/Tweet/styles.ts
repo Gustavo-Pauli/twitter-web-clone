@@ -30,7 +30,7 @@ export const Retweeted = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 6px 0 1px;
+  padding: 6px 0 4px;
   // padding-top: 8px;
 
   margin-left: 32px;
@@ -102,8 +102,9 @@ export const Media = styled.div`
   // height: 504px;
   margin-top: 12px;
   width: 100%;
-  height: 250px;
+  height: 390px;
   border-radius: 16px;
+  overflow: hidden;
   background: #526372;
 `;
 
@@ -113,8 +114,8 @@ interface PhotosProps {
 
 export const Photos = styled.div<PhotosProps>`
   // display: flex;
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Photo = styled.div`
@@ -123,10 +124,14 @@ export const Photo = styled.div`
   // height: 100%;
   // border-radius: 99999px;
   position: relative;
+  width: 100%;
+  height: 100%;
   // top: 0;
   // left: 0;
 
   a {
+    width: 100%;
+    height: 100%;
     // width: 251px;
     // height: 141px;
     // width: 25%;
