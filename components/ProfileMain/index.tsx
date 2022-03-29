@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileHeader from '../ProfileHeader';
 import { Container, Header, ProfileMiniHeader, BackIcon, BottomMenu, HomeIcon, ExploreIcon, NotificationsIcon, MessagesIcon} from './styles';
 
 // import { Container } from './styles';
@@ -17,7 +18,7 @@ const ProfileMain: React.FC = () => {
         </ProfileMiniHeader>
       </Header>
 
-      {/* <ProfilePage /> */}
+      <ProfileHeader />
 
       {/* TODO: just show bottom menu if on mobile*/}
       <BottomMenu>

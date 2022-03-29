@@ -30,20 +30,33 @@ export default createGlobalStyle`
   :root {
     --background: #000;
     --primary: #D9D9D9;
-    --secondary: #15181C;
+    // --secondary: #e01674;
+    // --secondary-hover: #f91880;
+    --secondary: #33A1F2;
+    --secondary-hover: #2C8ED6;
+    // --secondary: #15181C;
     --search: #202327;
     // --white: #D9D9D9;
     --gray: #71767B;
+    --blue-gray: #536471;
     --outline: #2F3336;
     --retweet: #00C06B;
     --like: #E8265E;
-    --twitter: #33A1F2;
-    --twitter-dark-hover: #011017;
-    --twitter-light-hover: #2C8ED6;
+    //--twitter: #33A1F2;
+    // --twitter-dark-hover: #011017;
+    //--twitter-light-hover: #2C8ED6;
     --button-hover: #eff3f41a
+    
   }
 
   .Rotate90Left {
     transform: rotate(-90deg);
+  }
+
+  .ProfileHeaderIcons {
+    width: 19px;
+    height: 19px;
+
+    color: red;
   }
 `;
