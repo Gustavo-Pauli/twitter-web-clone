@@ -60,18 +60,23 @@ export const DataHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 36px;
+  // margin-bottom: min(36px, max(12px, 3vw));
+  // margin-bottom: clamp(8px, calc(6vw), 36px);
+  // margin-bottom: 12px;
+  // margin-bottom: min(36px, max(12px, 3vw));
   // height: max(18px, min(54px, 8.8vw));
   // margin-top: min(24px, max(72px, 22vw));
 `
 
 export const AvatarFlexPosition = styled.div`
-  width: max(45px, min(135px, 22vw));
+  width: max(48px, min(135px, 22vw));
 `;
 
 export const AvatarAbsolutePosition = styled.div`
-  width: max(45px, min(135px, 22vw));
-  height: max(45px, min(135px, 22vw));
+  /* width: max(48px, min(135px, 22.5vw));
+  height: max(48px, min(135px, 22.5vw)); */
+  width: clamp(48px, calc(22.5vw + 4px), 135px);
+  height: clamp(48px, calc(22.5vw + 4px), 135px);
 
   // border: 3.75px solid var(--background);
 
@@ -80,7 +85,8 @@ export const AvatarAbsolutePosition = styled.div`
   overflow: hidden;
 
   position: absolute;
-  top: max(-67.5px, max(-11vw, -67.5px));
+  margin-top: -15%;
+  // top: max(-67.5px, max(-11vw, -67.5px));
 
   // margin: -50px 0 0 0;
   // bottom: max(-60px, -10vw);
@@ -90,20 +96,19 @@ export const AvatarAbsolutePosition = styled.div`
 
 export const AvatarBackground = styled.div`
   position: absolute;
-  width: calc(100%);
-  height: calc(100%);
+  width: 100%;
+  height: 100%;
   background: var(--background);
 `;
 
 export const Avatar = styled.div`
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  @media (min-width: 601px) {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  @media (min-width: 500px) {
     width: calc(100% - 8px);
     height: calc(100% - 8px);
   }
 
-  z-index: 3;
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   left: 50%;

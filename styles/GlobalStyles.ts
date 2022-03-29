@@ -29,7 +29,8 @@ export default createGlobalStyle`
 
   :root {
     --background: #000;
-    --primary: #D9D9D9;
+    --background-transparent: rgba(0, 0, 0, 0.7);
+    --primary: #E7E9EA;
     // --secondary: #e01674;
     // --secondary-hover: #f91880;
     --secondary: #33A1F2;
@@ -58,5 +59,15 @@ export default createGlobalStyle`
     height: 19px;
 
     color: red;
+  }
+
+  .TweetYouRetweetedIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .TweetFooterIcons {
+    width: 19px;
+    height: 19px;
   }
 `;

@@ -17,7 +17,9 @@ export const Header = styled.div`
   z-index: 2;
   position: sticky;
   top: 0;
-  background: var(--background);
+  background: var(--background-transparent);
+  backdrop-filter: blur(12px);
+
   /* TODO: change background color to transparent black and add blur */
 
   display: flex;
