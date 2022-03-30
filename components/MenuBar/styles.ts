@@ -45,7 +45,7 @@ export const NavSection = styled.div`
   }
 `;
 
-export const LogoButton = styled.div`
+export const LogoButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,6 +56,7 @@ export const LogoButton = styled.div`
   padding: 4px 0;
 
   cursor: pointer;
+  text-decoration: none;
 
   div {
     width: 100%;
@@ -78,7 +79,7 @@ interface MenuButtonProps {
   active?: boolean;
 }
 
-export const MenuButton = styled.div<MenuButtonProps>`
+export const MenuButton = styled.a<MenuButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +93,7 @@ export const MenuButton = styled.div<MenuButtonProps>`
   padding: 4px 0;
 
   cursor: pointer;
+  text-decoration: none;
 
   div {
     width: 100%;
