@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { 
   Container,
   NavSection,
-  Logo,
+  LogoIcon,
   MenuButton,
   HomeIcon,
   ExploreIcon,
@@ -16,55 +16,101 @@ import {
   ProfileIcon,
   MoreIcon,
   AccountsSection,
+  LogoButton,
+  NewTweetButton,
+  NewTweetIcon,
  } from './styles';
 
 const MenuBar: React.FC = () => {
   return (
     <Container>
-      <NavSection>
-        <Logo />
+      <NavSection className='BlockSelection'>
+        <Link href='/home' passHref>
+          <LogoButton>
+            <div>
+              <LogoIcon />
+            </div>
+          </LogoButton>
+        </Link>
 
         <Link href='/home' passHref>
           <MenuButton>
-            <HomeIcon />
-            <span>Home</span>
+            <div>
+              <HomeIcon />
+              <span>Home</span>
+            </div>
           </MenuButton>
         </Link>
 
-        <MenuButton>
-          <ExploreIcon />
-          <span>Explore</span>
-        </MenuButton>
+        <Link href='/explore' passHref>
+          <MenuButton>
+            <div>
+              <ExploreIcon />
+              <span>Explore</span>
+            </div>
+          </MenuButton>
+        </Link>
 
-        <MenuButton>
-          <NotificationsIcon />
-          <span>Notifications</span>
-        </MenuButton>
+        <Link href='/notifications' passHref>
+          <MenuButton>
+            <div>
+              <NotificationsIcon />
+              <span>Notifications</span>
+            </div>
+          </MenuButton>
+        </Link>
 
-        <MenuButton>
-          <MessagesIcon />
-          <span>Messages</span>
-        </MenuButton>
+        <Link href='/messages' passHref>
+          <MenuButton>
+            <div>
+              <MessagesIcon />
+              <span>Messages</span>
+            </div>
+          </MenuButton>
+        </Link>
 
-        <MenuButton>
-          <BookmarksIcon />
-          <span>Bookmarks</span>
-        </MenuButton>
+        <Link href='/bookmarks' passHref>
+          <MenuButton>
+            <div>
+              <BookmarksIcon />
+              <span>Bookmarks</span>
+            </div>
+          </MenuButton>
+        </Link>
 
-        <MenuButton>
-          <ListsIcon />
-          <span>Lists</span>
-        </MenuButton>
+        <Link href='/lists' passHref>
+          <MenuButton>
+            <div>
+              <ListsIcon />
+              <span>Lists</span>
+            </div>
+          </MenuButton>
+        </Link>
 
-        <MenuButton active>
-          <ProfileIcon />
-          <span>Profile</span>
-        </MenuButton>
+        <Link href='/profile' passHref>
+          <MenuButton active>
+            <div>
+              <ProfileIcon filled/>
+              <span>Profile</span>
+            </div>
+          </MenuButton>
+        </Link>
 
-        <MenuButton>
-          <MoreIcon />
-          <span>More</span>
-        </MenuButton>
+        {/* <button> */}
+          <MenuButton>
+            <div>
+              <MoreIcon />
+              <span>More</span>
+            </div>
+          </MenuButton>
+        {/* </button> */}
+
+        <NewTweetButton>
+          <div>
+            <NewTweetIcon />
+            <span>Tweet</span>
+          </div>
+        </NewTweetButton>
       </NavSection>
 
       <AccountsSection>

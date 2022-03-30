@@ -9,6 +9,8 @@ import {
   Lists,
   Profile,
   More,
+  Twitter,
+  NewTweet,
  } from "../../styles/Icons"; 
 
 export const Container = styled.div`
@@ -22,7 +24,7 @@ export const Container = styled.div`
     position: sticky;
     top: 0;
     left: 0;
-    padding: 9px 19px 20px;
+    padding: 0 16px;
     max-height: 100vh;
     overflow-y: auto;
   }
@@ -33,48 +35,109 @@ export const NavSection = styled.div`
   flex-direction: column;
   align-items: center;
 
+  /* & > * {
+    margin-bottom: 6px;
+  } */
+
   @media (min-width: 1280px) {
+    width: 250px;
     align-items: flex-start;
   }
 `;
 
-export const Logo = styled.div`
+export const LogoButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  box-sizing: content-box; 
+  padding: 4px 0;
 
+  cursor: pointer;
+
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99999px;
+    transition: background 0.2s ease;
+  }
+
+  :hover {
+    div {
+      background: var(--twitter-hover);
+    }
+  }
 `;
 
 interface MenuButtonProps {
   active?: boolean;
 }
 
-export const MenuButton = styled.a<MenuButtonProps>`
+export const MenuButton = styled.div<MenuButtonProps>`
   display: flex;
-  flex-shrink: 0;
   align-items: center;
-  padding: 12px 0;
+  justify-content: center;
+  flex-shrink: 0;
+  // padding: 12px 0;
   outline: 0;
+  width: 52px;
+  height: 52px;
+  // border-radius: 99999px;
+  box-sizing: content-box; 
+  padding: 4px 0;
+
+  cursor: pointer;
+
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99999px;
+    padding: 12px;
+    transition: background 0.2s ease;
+  }
 
   span {
     display: none;
   }
 
-  @media (min-width: 1280px) {
-    span {
-      display: inline;
-      margin-left: 19px;
-
-      font-weight: bold;
-      font-size: 20px;
+  &:hover {
+    div {
+      background: var(--button-hover);
     }
   }
 
-  & + a {
-    margin-top: 4px;
+  @media (min-width: 1280px) {
+    width: 100%;
+    justify-content: left;
+    span {
+      display: inline;
+      margin: 0 15px 0 20px;
+
+      font-weight: ${({ active }) => (active ? 'bold' : 'normal')};
+      font-size: 20px;
+    }
+    div {
+      width: auto;
+      height: auto;
+    }
   }
 `;
 
 // apply on all menu icons
 const iconCSS = styled.div`
   flex-shrink: 0;
+`;
+
+export const LogoIcon = styled(Twitter)`
+  ${iconCSS}
 `;
 
 export const HomeIcon = styled(Home)`
@@ -107,6 +170,63 @@ export const ProfileIcon = styled(Profile)`
 
 export const MoreIcon = styled(More)`
   ${iconCSS}
+`;
+
+// maybe change this to a button instead of a div later
+export const NewTweetButton = styled.div`
+  width: 52px;
+  height: 52px;
+
+  box-sizing: content-box; 
+  padding-top: 16px;
+
+  div {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border-radius: 99999px;
+    background: var(--secondary);
+    transition: background 0.2s ease;
+
+    svg {
+      display: flex;
+    }
+
+    span {
+      display: none;
+      font-weight: bold;
+      font-size: 17px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    div {
+      width: 226px;
+
+      svg {
+        display: none;
+      }
+      
+      span {
+        display: flex;
+      }
+    }
+  }
+
+  :hover {
+    div {
+      background: var(--secondary-hover);
+    }
+  }
+`;
+
+export const NewTweetIcon = styled(NewTweet)`
+
 `;
 
 export const AccountsSection = styled.div`

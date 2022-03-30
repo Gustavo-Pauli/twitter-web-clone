@@ -15,6 +15,8 @@ import RetweetBold from '../assets/icons/RetweetBold'
 import Comment from '../assets/icons/Comment'
 import Like from '../assets/icons/Like'
 import Share from '../assets/icons/Share'
+import Twitter from '../assets/icons/Twitter'
+import NewTweet from '../assets/icons/NewTweet'
 
 
 export {
@@ -35,4 +37,6 @@ export {
   Profile,
   ProfileActive,
   More,
+  Twitter,
+  NewTweet,
 }

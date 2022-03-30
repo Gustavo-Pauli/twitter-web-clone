@@ -7,7 +7,7 @@ import { Container, Tabs, Tab, Tweets } from './styles';
 const Feed: React.FC = () => {
   return (
     <Container>
-      <Tabs className='BlockTextSelection'>
+      <Tabs className='BlockSelection'>
         <Tab active>
           <div>
             Tweets

@@ -81,7 +81,7 @@ export default createGlobalStyle`
     background: var(--twitter-hover);
   }
 
-  .BlockTextSelection {
+  .BlockSelection {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
