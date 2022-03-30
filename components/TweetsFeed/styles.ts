@@ -39,6 +39,7 @@ export const Tab = styled.div<Props>`
 
   outline: none;
   cursor: pointer;
+  transition: background 0.2s ease;
 
   :hover {
     background: var(--button-hover)

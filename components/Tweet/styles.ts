@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 import { 
-  RetweetBold,
-  Comment,
-  Retweet,
-  Like,
-  Share,
+  RetweetBold as IconRetweetBold,
+  Comment as IconComment,
+  Retweet as IconRetweet,
+  Like as IconLike,
+  Share as IconShare,
   } from '../../styles/Icons';
 
 export const Container = styled.div`
@@ -16,13 +16,20 @@ export const Container = styled.div`
   // margin: 0 16px;
   border-bottom: 1px solid var(--outline);
 
+  transition: background 0.2s ease;
+  cursor: pointer;
+
+  :hover {
+    background: var(--light-hover);
+  }
+
   > div {
     display: flex;
     flex-direction: row;
   }
 `;
 
-export const YouRetweetedIcon = styled(RetweetBold)`
+export const YouRetweetedIcon = styled(IconRetweetBold)`
   
 `;
 
@@ -93,7 +100,13 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.div`
+  margin-top: 0px;
 
+  span {
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--primary);
+  }
 `;
 
 export const Media = styled.div`
@@ -143,31 +156,138 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin: 12px 0 12px;
+  margin: 8px 0;
   max-width: 425px;
+
+  * {
+    align-items: center;
+  }
 
   div {
     display: flex;
     flex-direction: row;
 
     span {
-      margin-left: 10px;
+      margin-left: 6px;
       font-size: 13px;
       color: var(--gray);
     }
   }
 `;
 
-export const CommentIcon = styled(Comment)`
+export const Reply = styled.div`
+  :hover {
+    svg {
+      transition: fill 0.2s ease;
+      fill: var(--twitter);
+    }
+    span {
+      transition: color 0.2s ease;
+      color: var(--twitter);
+    }
+    div {
+      transition: background 0.2s ease;
+      background: var(--twitter-hover);
+    }
+  }
 
+  div {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+  
+export const Retweet = styled.div`
+  :hover {
+    svg {
+      transition: fill 0.2s ease;
+      fill: var(--retweet);
+    }
+    span {
+      transition: color 0.2s ease;
+      color: var(--retweet);
+    }
+    div {
+      transition: background 0.2s ease;
+      background: var(--retweet-hover);
+    }
+  }
+
+  div {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
-export const RetweetIcon = styled(Retweet)`
+export const Like = styled.div`
+  :hover {
+    svg {
+      transition: fill 0.2s ease;
+      fill: var(--like);
+    }
+    span {
+      transition: color 0.2s ease;
+      color: var(--like);
+    }
+    div {
+      transition: background 0.2s ease;
+      background: var(--like-hover);
+    }
+  }
+
+  div {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
-export const LikeIcon = styled(Like)`
+export const Share = styled.div`
+  :hover {
+    svg {
+      transition: fill 0.2s ease;
+      fill: var(--twitter);
+    }
+    span {
+      transition: color 0.2s ease;
+      color: var(--twitter);
+    }
+    div {
+      transition: background 0.2s ease;
+      background: var(--twitter-hover);
+    }
+  }
+
+  div {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
-export const ShareIcon = styled(Share)`
+export const CommentIcon = styled(IconComment)`
+`;
+
+export const RetweetIcon = styled(IconRetweet)`
+`;
+
+export const LikeIcon = styled(IconLike)`
+`;
+
+export const ShareIcon = styled(IconShare)`
 `;
 

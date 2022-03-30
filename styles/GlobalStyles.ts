@@ -36,18 +36,22 @@ export default createGlobalStyle`
     --secondary: #33A1F2;
     --secondary-hover: #2C8ED6;
     // --secondary: #15181C;
-    --search: #202327;
+    // --search: #202327;
     // --white: #D9D9D9;
     --gray: #71767B;
     --blue-gray: #536471;
     --outline: #2F3336;
-    --retweet: #00C06B;
-    --like: #E8265E;
-    //--twitter: #33A1F2;
+    --retweet: rgb(0, 186, 124);
+    --retweet-hover: rgba(0, 186, 124, 0.1);
+    --like: rgb(249, 24, 128);
+    --like-hover: rgba(249, 24, 128, 0.1);
+    --twitter: rgb(29, 155, 240);
+    --twitter-hover: rgba(29, 155, 240, 0.1);
     // --twitter-dark-hover: #011017;
     //--twitter-light-hover: #2C8ED6;
-    --button-hover: #eff3f41a
-    
+    --button-hover: #eff3f41a;
+    --light-hover: rgba(255, 255, 255, 0.03);
+    // --tweet-generic-buttons-hover: rgba(29, 155, 240, 0.1);
   }
 
   .Rotate90Left {
@@ -57,8 +61,6 @@ export default createGlobalStyle`
   .ProfileHeaderIcons {
     width: 19px;
     height: 19px;
-
-    color: red;
   }
 
   .TweetYouRetweetedIcon {
@@ -69,5 +71,22 @@ export default createGlobalStyle`
   .TweetFooterIcons {
     width: 19px;
     height: 19px;
+  }
+
+  .TweetIconHoverColor {
+    background: var(--twitter-hover);
+  }
+
+  .TweetRetweetIconHoverColor {
+    background: var(--twitter-hover);
+  }
+
+  .BlockTextSelection {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
   }
 `;

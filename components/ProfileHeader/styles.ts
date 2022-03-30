@@ -128,6 +128,8 @@ export const EditButton = styled.div`
     font-weight: bold;
     font-size: 15px;
 
+    transition: background 0.2s ease;
+
     cursor: pointer;
   
     :hover {

@@ -17,6 +17,10 @@ import {
   RetweetIcon,
   LikeIcon,
   ShareIcon,
+  Reply,
+  Retweet,
+  Like,
+  Share,
 } from './styles';
 
 const Tweet: React.FC = () => {
@@ -71,21 +75,29 @@ const Tweet: React.FC = () => {
             </Media>
           </Body>
           <Footer>
-            <div>
-              <CommentIcon />
+            <Reply>
+              <div>
+                <CommentIcon />
+              </div>
               <span>289</span>
-            </div>
-            <div>
-              <RetweetIcon />
+            </Reply>
+            <Retweet>
+              <div>
+                <RetweetIcon/>
+              </div>
               <span>21.5K</span>
-            </div>
-            <div>
-              <LikeIcon />
+            </Retweet>
+            <Like>
+              <div>
+                <LikeIcon />
+              </div>
               <span>74.1K</span>
-            </div>
-            <div>
-              <ShareIcon />
-            </div>
+            </Like>
+            <Share>
+              <div>
+                <ShareIcon />
+              </div>
+            </Share>
           </Footer>
         </Content>
       </div>
