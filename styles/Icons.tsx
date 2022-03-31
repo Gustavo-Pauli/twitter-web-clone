@@ -18,6 +18,7 @@ import Share from '../assets/icons/Share'
 import Twitter from '../assets/icons/Twitter'
 import NewTweet from '../assets/icons/NewTweet'
 import Logout from '../assets/icons/Logout'
+import Search from '../assets/icons/Search'
 
 
 export {
@@ -41,4 +42,5 @@ export {
   Twitter,
   NewTweet,
   Logout,
+  Search,
 }

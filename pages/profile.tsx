@@ -5,6 +5,7 @@ import GlobalStyles from '../styles/GlobalStyles'
 import Layout from '../components/Layout'
 import ProfileMain from '../components/ProfileMain'
 import MenuBar from '../components/MenuBar'
+import SideBar from '../components/SideBar'
 
 const Profile: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Profile: NextPage = () => {
       <Layout>
         <MenuBar />
         <ProfileMain />
+        <SideBar />
       </Layout>
       
     </div>

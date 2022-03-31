@@ -40,6 +40,8 @@ export default createGlobalStyle`
     // --white: #D9D9D9;
     --gray: #71767B;
     --blue-gray: #536471;
+    --search-bar: rgb(32, 35, 39);
+    --side-bar-body: rgb(22, 24, 28);
     --outline: #2F3336;
     --retweet: rgb(0, 186, 124);
     --retweet-hover: rgba(0, 186, 124, 0.1);
