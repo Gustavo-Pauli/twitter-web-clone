@@ -27,9 +27,9 @@ export const Container = styled.div`
     position: sticky;
     top: 0;
     left: 0;
-    padding: 0 16px;
+    padding: 0 2px;
     max-height: 100vh;
-    overflow-y: auto;
+    overflow-y: none;
   }
 `;
 

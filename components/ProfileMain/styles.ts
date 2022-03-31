@@ -30,7 +30,7 @@ export const Header = styled.div`
   padding: 8px 0 9px 13px;
   /* border-bottom: 1px solid var(--outline) */
 
-  > button {
+  > a {
     padding: 8px;
     border-radius: 50%;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ProfileHeader from '../ProfileHeader';
 import { Container, Header, ProfileMiniHeader, BackIcon, BottomMenu, HomeIcon, ExploreIcon, NotificationsIcon, MessagesIcon} from './styles';
 
@@ -8,9 +9,11 @@ const ProfileMain: React.FC = () => {
   return (
     <Container>
       <Header>
-        <button>
-          <BackIcon />
-        </button>
+        <Link href='/home' passHref>
+          <a>
+            <BackIcon />
+          </a>
+        </Link>
 
         <ProfileMiniHeader>
           <strong>Gustavo Pauli</strong>
