@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import GlobalStyles from '../styles/GlobalStyles'
 import Layout from '../components/Layout'
+import MenuBar from '../components/MenuBar'
 
 const Home: NextPage = () => {
   return (
@@ -10,10 +11,14 @@ const Home: NextPage = () => {
       <Head>
         <title>Twitter</title>
         <meta name="Twitter" content="Twitter - Home" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/twitter.ico" />
       </Head>
 
       <GlobalStyles />
+
+      <Layout>
+        {/* <MenuBar /> */}
+      </Layout>
       
     </div>
   )

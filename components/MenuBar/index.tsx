@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { 
   Container,
@@ -15,10 +16,13 @@ import {
   ListsIcon,
   ProfileIcon,
   MoreIcon,
-  AccountsSection,
+  AccountSection,
   LogoButton,
   NewTweetButton,
   NewTweetIcon,
+  Avatar,
+  LogoutIcon,
+  AcccountText,
  } from './styles';
 
 const MenuBar: React.FC = () => {
@@ -113,9 +117,16 @@ const MenuBar: React.FC = () => {
         </NewTweetButton>
       </NavSection>
 
-      <AccountsSection>
-
-      </AccountsSection>
+      <AccountSection>
+        <Avatar>
+          <Image src='https://pbs.twimg.com/profile_images/1378854577001410561/TCoFz-6M_400x400.jpg' alt='Avatar'layout='fill' objectFit='cover'/>
+        </Avatar>
+        <AcccountText>
+          <strong>Gustavo Pauli</strong>
+          <span>@Gustavo_ps</span>
+        </AcccountText>
+        <LogoutIcon />
+      </AccountSection>
     </Container>
   );
 }

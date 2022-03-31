@@ -11,7 +11,10 @@ import {
   More,
   Twitter,
   NewTweet,
+  Logout,
  } from "../../styles/Icons"; 
+
+//  import logout from '../../assets/SVGIcons/menu-bar/'
 
 export const Container = styled.div`
   display: none;
@@ -231,6 +234,75 @@ export const NewTweetIcon = styled(NewTweet)`
 
 `;
 
-export const AccountsSection = styled.div`
+export const AccountSection = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+
+  border-radius: 99999px;
+  margin-bottom: 16px;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+  
+  @media (min-width: 1280px) {
+    width: 100%;
+    height: 64px;
+    justify-content: left;
+  }
+  
+  :hover {
+    background: var(--button-hover);
+  }
 
 `;
+
+export const Avatar = styled.div`
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  
+  @media (min-width: 1280px) {
+    margin-left: 14px;
+  }
+`;
+
+export const AcccountText = styled.div`
+  display: none;
+  flex-direction: column;
+  strong {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  span {
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--gray);
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    margin-left: 12px;
+  }
+`;
+
+export const LogoutIcon = styled(Logout)`
+  display: none;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  color: var(--primary);
+
+  @media (min-width: 1280px) {
+    display: inline;
+    position: relative;
+    margin: 0 14px 0 auto;
+
+  }
+`;
+

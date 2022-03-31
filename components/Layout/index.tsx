@@ -5,13 +5,14 @@ import MenuBar from '../MenuBar';
 
 import { Container, Wrapper } from './styles';
 
-const Layout: React.FC = () => {
+const Layout: React.FC = (props) => {
   return (
     <Container>
       <Wrapper>
-        <MenuBar />
-        <ProfileMain />
+        {/* <MenuBar /> */}
+        {/* <ProfileMain /> */}
         {/* <SideBar /> */}
+        {props.children}
       </Wrapper>
     </Container>
   );

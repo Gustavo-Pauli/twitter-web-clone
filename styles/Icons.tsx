@@ -17,6 +17,7 @@ import Like from '../assets/icons/Like'
 import Share from '../assets/icons/Share'
 import Twitter from '../assets/icons/Twitter'
 import NewTweet from '../assets/icons/NewTweet'
+import Logout from '../assets/icons/Logout'
 
 
 export {
@@ -39,4 +40,5 @@ export {
   More,
   Twitter,
   NewTweet,
+  Logout,
 }

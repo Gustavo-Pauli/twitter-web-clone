@@ -3,17 +3,10 @@ import Head from 'next/head'
 
 import GlobalStyles from '../styles/GlobalStyles'
 import Layout from '../components/Layout'
+import ProfileMain from '../components/ProfileMain'
+import MenuBar from '../components/MenuBar'
 
-export async function getServerSideProps(context: any) {
-  return {
-    redirect: {
-      destination: '/profile',
-      permanent: false,
-    }
-  }
-}
-
-const Home: NextPage = () => {
+const Profile: NextPage = () => {
   return (
     <div>
       <Head>
@@ -23,10 +16,15 @@ const Home: NextPage = () => {
       </Head>
 
       <GlobalStyles />
-      <Layout />
+      {/* <Layout /> */}
+      
+      <Layout>
+        <MenuBar />
+        <ProfileMain />
+      </Layout>
       
     </div>
   )
 }
 
-export default Home
+export default Profile
