@@ -28,7 +28,9 @@ const Tweet: React.FC = () => {
     <Container>
       <Retweeted>
         <YouRetweetedIcon />
-        <span>You Retweeted</span>
+        <a>
+          <span>You Retweeted</span>
+        </a>
       </Retweeted>
       <div>
         <Avatar>
@@ -38,10 +40,10 @@ const Tweet: React.FC = () => {
         </Avatar>
         <Content>
           <Header>
-            <strong className='ellipsis'>giraffalope✨🐱✨</strong>
+              <strong className='ellipsis'><a>giraffalope✨🐱✨</a></strong>
             <span className='ellipsis'>@Giraffaloops</span>
             <span>·</span>
-            <span>Feb 11</span>
+              <span><a>Feb 11</a></span>
           </Header>
           <Body>
             <span>comic about a wanderer 🐸🌠 (1/2)</span>

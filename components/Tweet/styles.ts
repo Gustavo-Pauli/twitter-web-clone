@@ -42,7 +42,17 @@ export const Retweeted = styled.div`
 
   margin-left: 32px;
 
-  > span {
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    :hover{
+      text-decoration: underline solid var(--gray);
+    }
+  }
+
+  span {
     margin-left: 12px;
     font-size: 13px;
     font-weight: bold;
@@ -76,7 +86,7 @@ export const Header = styled.div`
   // text-overflow: ellipsis;
   // overflow: hidden;
 
-  * {
+  > * {
     margin-right: 5px;
   }
 
@@ -84,12 +94,32 @@ export const Header = styled.div`
     font-size: 15px;
     font-weight: bold;
     color: var(--primary);
+
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      color: var(--primary);
+
+      :hover{
+      text-decoration: underline solid var(--primary);
+    }
+    }
   }
 
   span {
     font-size: 15px;
     font-weight: normal;
     color: var(--gray);
+
+    a {
+      font-size: 15px;
+      font-weight: normal;
+      color: var(--gray);
+
+      :hover{
+      text-decoration: underline solid var(--gray);
+    }
+    }
   }
 
   .ellipsis {
