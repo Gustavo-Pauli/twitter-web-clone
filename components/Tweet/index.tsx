@@ -12,7 +12,7 @@ import {
   Photos,
   Photo,
   Body,
-  Footer,
+  /* Footer,
   CommentIcon,
   RetweetIcon,
   LikeIcon,
@@ -20,8 +20,9 @@ import {
   Reply,
   Retweet,
   Like,
-  Share,
+  Share, */
 } from './styles';
+import TweetFooter from '../TweetFooter';
 
 const Tweet: React.FC = () => {
   return (
@@ -76,31 +77,7 @@ const Tweet: React.FC = () => {
               {/* <Video></Video> */}
             </Media>
           </Body>
-          <Footer>
-            <Reply>
-              <div>
-                <CommentIcon />
-              </div>
-              <span>289</span>
-            </Reply>
-            <Retweet>
-              <div>
-                <RetweetIcon/>
-              </div>
-              <span>21.5K</span>
-            </Retweet>
-            <Like>
-              <div>
-                <LikeIcon />
-              </div>
-              <span>74.1K</span>
-            </Like>
-            <Share>
-              <div>
-                <ShareIcon />
-              </div>
-            </Share>
-          </Footer>
+          <TweetFooter />
         </Content>
       </div>
     </Container>

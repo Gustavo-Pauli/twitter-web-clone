@@ -22,7 +22,7 @@ const SideBar: React.FC = () => {
         <SideList title="You might like">
           <FollowSuggestion name="React" screenName="@reactjs" avatarSrc="https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png" />
           <FollowSuggestion name="Next.js" screenName="@nextjs" avatarSrc="https://pbs.twimg.com/profile_images/1468045715083509767/JrehsCpb_400x400.png" />
-          <FollowSuggestion name="Firebase" screenName="@Firebase" avatarSrc="https://pbs.twimg.com/profile_images/1012243829477392387/m3cEA33V_400x400.jpg" />
+          <FollowSuggestion name="Firebase" screenName="@Firebase" avatarSrc="https://pbs.twimg.com/profile_images/1517183744636964875/_475wi5p_400x400.jpg" />
         </SideList>
 
         <SideList title="What's happening">
