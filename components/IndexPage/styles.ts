@@ -86,12 +86,27 @@ export const Content = styled.div`
     max-width: 280px;
     height: 40px;
     font-size: 15px;
+  }
 
-    :hover {
-      cursor: pointer;
+  // sign up buttons
+  > button {
+    :nth-of-type(1), :nth-of-type(2) {
+      background: #ffffff;
+      :hover {
+        background: var(--white-solid-hover);
+      }
+    }
+
+    :nth-of-type(3) {
+      color: #ffffff;
+      background: var(--twitter);
+      :hover {
+        background: var(--twitter-solid-hover);
+      }
     }
   }
 
+  // text and sign in button
   > div {
     margin-top: auto;
 
@@ -100,6 +115,13 @@ export const Content = styled.div`
       width: 100%;
       max-width: 280px;
       height: 38px;
+
+      background: #ffffff00;
+      color: var(--twitter);
+
+      :hover {
+        background: var(--twitter-hover);
+      }
     }
 
     // already have an account?

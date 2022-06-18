@@ -31,6 +31,7 @@ export default createGlobalStyle`
     --background: #000;
     --background-transparent: rgba(0, 0, 0, 0.7);
     --primary: #E7E9EA;
+    --primary-hover: rgb(215, 219, 220);
     // --secondary: #e01674;
     // --secondary-hover: #f91880;
     --secondary: #33A1F2;
@@ -49,11 +50,13 @@ export default createGlobalStyle`
     --like: rgb(249, 24, 128);
     --like-hover: rgba(249, 24, 128, 0.1);
     --twitter: rgb(29, 155, 240);
+    --twitter-solid-hover: rgb(26, 140, 216);
     --twitter-hover: rgba(29, 155, 240, 0.1);
     // --twitter-dark-hover: #011017;
     //--twitter-light-hover: #2C8ED6;
     --button-hover: #eff3f41a;
     --light-hover: rgba(255, 255, 255, 0.03);
+    --white-solid-hover: rgb(230, 230, 230);
     // --tweet-generic-buttons-hover: rgba(29, 155, 240, 0.1);
   }
 

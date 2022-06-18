@@ -8,24 +8,37 @@ export const Container = styled.div`
 `;
 
 export const Item = styled.div`
-  padding: 10px 16px;
-  font-size: 15px;
+  // padding: 10px 16px;
+  // font-size: 15px;
   color: var(--primary);
 
-  & + div {
-    border-top: 1px solid var(--outline);
+  + div {
+    // border-top: 1px solid var(--outline);
   }
 
-  &:first-child {
-    padding-top: 13px;
+  :first-child {
+    // padding-top: 13px;
   }
 
-  &:last-child {
-    padding-bottom: 17px;
+  :last-child {
+    // padding-bottom: 17px;
+  }
+
+  :hover {
+    background: var(--light-hover);
+    cursor: pointer;
   }
 `;
 
 export const Title = styled.div`
+  padding: 12px 16px;
   font-weight: bold;
   font-size: 20px;
+`;
+
+export const Footer = styled.div`
+  padding: 16px;
+  font-size: 15px;
+  color: var(--twitter);
+  // font-weight: bold;
 `;

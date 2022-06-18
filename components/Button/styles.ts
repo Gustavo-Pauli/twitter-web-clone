@@ -20,4 +20,10 @@ export const StyledButton =  styled.button<Props>`
   display: flex;
   justify-content: center;
   align-items: center; 
+
+  transition-duration: 0.25s;
+
+  :hover {
+    cursor: pointer;
+  }
 `;

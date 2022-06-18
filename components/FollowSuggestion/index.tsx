@@ -9,6 +9,7 @@ import {
   Info,
   FollowButton,
  } from './styles';
+import Link from 'next/link';
 
 interface Props {
   name?: string,
@@ -28,15 +29,15 @@ const FollowSuggestion: React.FC<Props> = ({
 
         <Info>
           <strong>{name}</strong>
-          <span>{screenName}</span>
+          <span>{"@" + screenName}</span>
         </Info>
       </div>
 
-        <FollowButton>
-          <Button>
-            Follow
-          </Button>
-        </FollowButton>
+      <FollowButton>
+        <Button>
+          Follow
+        </Button>
+      </FollowButton>
     </Container>
   );
 }

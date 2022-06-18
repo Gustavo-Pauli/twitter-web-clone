@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  padding: 10px 16px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,5 +42,7 @@ export const Info = styled.div`
 `;
 
 export const FollowButton = styled.div`
-
+  > button:hover {
+    background: var(--primary-hover);
+  }
 `;

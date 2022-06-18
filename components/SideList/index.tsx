@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 
-import { Container, Item, Title} from './styles';
+import { Container, Item, Title, Footer} from './styles';
 
 interface Props {
   title: string;
@@ -13,14 +14,17 @@ const SideList: React.FC<Props> = ({ title, children }) => {
 
   return (
     <Container>
-      <Item>
-        <Title>{title}</Title>
-      </Item>
-
+      <Title>{title}</Title>
 
       {childrens.map((children, index) => (
         <Item key={index}>{children}</Item>
       ))}
+
+      <Item>
+        <Footer>
+          Show more
+        </Footer>
+      </Item>
     </Container>
   );
 }

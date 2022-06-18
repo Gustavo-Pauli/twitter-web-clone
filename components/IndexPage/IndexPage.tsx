@@ -13,15 +13,15 @@ const IndexPage: React.FC = () => {
             <div>{/* Logo */}</div>
             <h1>Happening now</h1>
             <h2>Join Twitter today.</h2>
-            <Button bgColor="#ffffff">Sign up with Google</Button>
-            <Button bgColor="#ffffff">Sign up with Apple</Button>
+            <Button>Sign up with Google</Button>
+            <Button>Sign up with Apple</Button>
             <span>or</span>
-            <Button textColor="#ffffff" bgColor="var(--twitter)">Sign up with phone or email</Button>
+            <Button>Sign up with phone or email</Button>
 
             <div>
               <h3>Already have an account?</h3>
               <Link href='/profile' passHref>
-                <Button outlined  bgColor="#ffffff0" textColor='var(--twitter)'>Sign in</Button>
+                <Button outlined>Sign in</Button>
               </Link>
             </div>
           </Content>
