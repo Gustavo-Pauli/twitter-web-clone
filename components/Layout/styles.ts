@@ -11,4 +11,5 @@ export const Wrapper = styled.div`
 
   display: flex;
   justify-content: center;
+  // position: static;
 `;

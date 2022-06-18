@@ -116,16 +116,18 @@ const MenuBar: React.FC = () => {
         </NewTweetButton>
       </NavSection>
 
-      <AccountSection>
-        <Avatar>
-          <Image src='https://pbs.twimg.com/profile_images/1378854577001410561/TCoFz-6M_400x400.jpg' alt='Avatar'layout='fill' objectFit='cover'/>
-        </Avatar>
-        <AcccountText>
-          <strong>Gustavo Pauli</strong>
-          <span>@Gustavo_ps</span>
-        </AcccountText>
-        <LogoutIcon />
-      </AccountSection>
+      <Link href='/' passHref>
+        <AccountSection>
+          <Avatar>
+            <Image src='https://pbs.twimg.com/profile_images/1378854577001410561/TCoFz-6M_400x400.jpg' alt='Avatar'layout='fill' objectFit='cover'/>
+          </Avatar>
+          <AcccountText>
+            <strong>Gustavo Pauli</strong>
+            <span>@Gustavo_ps</span>
+          </AcccountText>
+          <LogoutIcon />
+        </AccountSection>
+      </Link>
     </Container>
   );
 }

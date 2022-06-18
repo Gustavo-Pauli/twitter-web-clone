@@ -12,10 +12,12 @@ export const StyledButton =  styled.button<Props>`
   color: ${(props) => (props.textColor)};
   border: ${(props) => (props.outlined ? `1px solid ${props.borderColor}` : "none")};
 
-  padding: 6px 16px 10px;
+  //  padding: 6px 16px 10px;
+  padding: 8px 16px 10px;
   border-radius: 99999px;
   font-weight: bold;
 
-  // display: flex;
-  // justify-content: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 `;
