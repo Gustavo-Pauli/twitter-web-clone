@@ -18,6 +18,9 @@ import {
 
 export const Container = styled.div`
   display: none;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @media (min-width: 500px) {
     display: flex;
@@ -29,7 +32,16 @@ export const Container = styled.div`
     left: 0;
     padding: 0 12px;
     max-height: 100vh;
-    overflow-y: none;
+  }
+
+  @media (max-height: 640px) {
+    .RemoveWhenSmall {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 
@@ -37,10 +49,7 @@ export const NavSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* & > * {
-    margin-bottom: 6px;
-  } */
+  overflow-y: none;
 
   @media (min-width: 1280px) {
     width: 250px;
@@ -94,6 +103,9 @@ export const MenuButton = styled.a<MenuButtonProps>`
   // border-radius: 99999px;
   box-sizing: content-box; 
   padding: 4px 0;
+  @media (max-height: 704px) {
+    padding: 0;
+  }
 
   cursor: pointer;
   text-decoration: none;
@@ -105,15 +117,18 @@ export const MenuButton = styled.a<MenuButtonProps>`
     align-items: center;
     justify-content: center;
     border-radius: 99999px;
-    padding: 12px;
     transition: background 0.2s ease;
+    padding: 12px;
+    @media (max-width: 1280px) {
+      padding: 0;
+    }
   }
 
   span {
     display: none;
   }
 
-  &:hover {
+  :hover {
     div {
       background: var(--button-hover);
     }
@@ -186,8 +201,8 @@ export const NewTweetButton = styled.div`
   padding-top: 16px;
 
   div {
-    width: 100%;
-    height: 100%;
+    width: 52px;
+    height: 52px;
 
     display: flex;
     align-items: center;
@@ -240,8 +255,10 @@ export const AccountSection = styled.div`
   align-items: center;
   width: 64px;
   height: 64px;
-
+  flex-shrink: 0;
+  
   border-radius: 99999px;
+  margin-top: 16px;
   margin-bottom: 16px;
 
   cursor: pointer;

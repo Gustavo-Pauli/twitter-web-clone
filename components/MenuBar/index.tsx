@@ -1,20 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import MenuButton from "../MenuButton";
 import { 
   Container,
   NavSection,
   LogoIcon,
-  MenuButton,
-  HomeIcon,
-  ExploreIcon,
-  NotificationsIcon,
-  MessagesIcon,
-  BookmarksIcon,
-  ListsIcon,
-  ProfileIcon,
-  MoreIcon,
   AccountSection,
   LogoButton,
   NewTweetButton,
@@ -24,7 +15,14 @@ import {
   AcccountText,
  } from './styles';
 
-const MenuBar: React.FC = () => {
+
+interface Active {
+  active?: string;
+}
+
+export type MenuCategories = "Home" | "Explore" | "Notifications" | "Messages" | "Bookmarks" | "Lists" | "Profile" | "More";
+
+const MenuBar: React.FC<Active> = ({ active }) => {
   return (
     <Container>
       <NavSection className='BlockSelection'>
@@ -37,75 +35,49 @@ const MenuBar: React.FC = () => {
         </Link>
 
         <Link href='/home' passHref>
-          <MenuButton>
-            <div>
-              <HomeIcon />
-              <span>Home</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Home" active={active === "Home"} />
+          </a>
         </Link>
 
         <Link href='/explore' passHref>
-          <MenuButton>
-            <div>
-              <ExploreIcon />
-              <span>Explore</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Explore" active={active === "Explore"} />
+          </a>
         </Link>
 
         <Link href='/notifications' passHref>
-          <MenuButton>
-            <div>
-              <NotificationsIcon />
-              <span>Notifications</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Notifications" active={active === "Notifications"} />
+          </a>
         </Link>
 
         <Link href='/messages' passHref>
-          <MenuButton>
-            <div>
-              <MessagesIcon />
-              <span>Messages</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Messages" active={active === "Messages"} />
+          </a>
         </Link>
 
         <Link href='/bookmarks' passHref>
-          <MenuButton>
-            <div>
-              <BookmarksIcon />
-              <span>Bookmarks</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Bookmarks" active={active === "Bookmarks"} />
+          </a>
         </Link>
 
         <Link href='/lists' passHref>
-          <MenuButton>
-            <div>
-              <ListsIcon />
-              <span>Lists</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Lists" active={active === "Lists"} />
+          </a>
         </Link>
 
         <Link href='/profile' passHref>
-          <MenuButton active>
-            <div>
-              <ProfileIcon filled/>
-              <span>Profile</span>
-            </div>
-          </MenuButton>
+          <a>
+            <MenuButton category="Profile" active={active === "Profile"} />
+          </a>
         </Link>
 
         {/* <button> */}
-          <MenuButton>
-            <div>
-              <MoreIcon />
-              <span>More</span>
-            </div>
-          </MenuButton>
+        <MenuButton category="More" />
         {/* </button> */}
 
         <NewTweetButton>
@@ -117,16 +89,18 @@ const MenuBar: React.FC = () => {
       </NavSection>
 
       <Link href='/' passHref>
-        <AccountSection>
-          <Avatar>
-            <Image src='https://pbs.twimg.com/profile_images/1378854577001410561/TCoFz-6M_400x400.jpg' alt='Avatar'layout='fill' objectFit='cover'/>
-          </Avatar>
-          <AcccountText>
-            <strong>Gustavo Pauli</strong>
-            <span>@Gustavo_ps</span>
-          </AcccountText>
-          <LogoutIcon />
-        </AccountSection>
+        <a>
+          <AccountSection>
+            <Avatar>
+              <Image src='https://pbs.twimg.com/profile_images/1378854577001410561/TCoFz-6M_400x400.jpg' alt='Avatar'layout='fill' objectFit='cover'/>
+            </Avatar>
+            <AcccountText>
+              <strong>Gustavo Pauli</strong>
+              <span>@Gustavo_ps</span>
+            </AcccountText>
+            <LogoutIcon />
+          </AccountSection>
+        </a>
       </Link>
     </Container>
   );

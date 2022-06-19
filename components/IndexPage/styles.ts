@@ -110,17 +110,20 @@ export const Content = styled.div`
   > div {
     margin-top: auto;
 
-    > button {
-      margin-bottom: 12px;
-      width: 100%;
-      max-width: 280px;
-      height: 38px;
+    > a {
+      text-decoration: none;
+      > button {
+        margin-bottom: 12px;
+        width: 100%;
+        max-width: 280px;
+        height: 38px;
 
-      background: #ffffff00;
-      color: var(--twitter);
+        background: #ffffff00;
+        color: var(--twitter);
 
-      :hover {
-        background: var(--twitter-hover);
+        :hover {
+          background: var(--twitter-hover);
+        }
       }
     }
 

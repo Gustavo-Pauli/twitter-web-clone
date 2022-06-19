@@ -21,24 +21,26 @@ const FollowSuggestion: React.FC<Props> = ({
   name, screenName, avatarSrc 
 }) => {
   return (
-    <Container>
-      <div>
-        <Avatar>
-          <Image src={avatarSrc} alt='Avatar'layout='fill' objectFit='cover'/>
-        </Avatar>
+    <Link href={"/" + screenName} passHref>
+      <Container>
+        <div>
+          <Avatar>
+            <Image src={avatarSrc} alt='Avatar'layout='fill' objectFit='cover'/>
+          </Avatar>
 
-        <Info>
-          <strong>{name}</strong>
-          <span>{"@" + screenName}</span>
-        </Info>
-      </div>
+          <Info>
+            <strong>{name}</strong>
+            <span>{"@" + screenName}</span>
+          </Info>
+        </div>
 
-      <FollowButton>
-        <Button>
-          Follow
-        </Button>
-      </FollowButton>
-    </Container>
+        <FollowButton>
+          <Button>
+            Follow
+          </Button>
+        </FollowButton>
+      </Container>
+    </Link>
   );
 }
 

@@ -4,6 +4,8 @@ import Head from 'next/head'
 import GlobalStyles from '../styles/GlobalStyles'
 import Layout from '../components/Layout'
 import MenuBar from '../components/MenuBar'
+import ExploreMain from '../components/Main/ExploreMain'
+import SideBar from '../components/SideBar'
 
 const Explore: NextPage = () => {
   return (
@@ -17,7 +19,9 @@ const Explore: NextPage = () => {
       <GlobalStyles />
 
       <Layout>
-        {/* <MenuBar /> */}
+        <MenuBar active="Explore" />
+        <ExploreMain />
+        <SideBar />
       </Layout>
       
     </div>

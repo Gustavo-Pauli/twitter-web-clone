@@ -1,9 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-import GlobalStyles from '../styles/GlobalStyles'
-import Layout from '../components/Layout'
-import MenuBar from '../components/MenuBar'
+import GlobalStyles from '../styles/GlobalStyles';
+import Layout from '../components/Layout';
+import MenuBar from '../components/MenuBar';
+import SideBar from '../components/SideBar';
+import HomeMain from '../components/Main/HomeMain';
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +19,9 @@ const Home: NextPage = () => {
       <GlobalStyles />
 
       <Layout>
-        {/* <MenuBar /> */}
+        <MenuBar active="Home" />
+        <HomeMain />
+        <SideBar />
       </Layout>
       
     </div>

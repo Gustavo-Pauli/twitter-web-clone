@@ -1,11 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-import GlobalStyles from '../styles/GlobalStyles'
-import Layout from '../components/Layout'
-import ProfileMain from '../components/ProfileMain'
-import MenuBar from '../components/MenuBar'
-import SideBar from '../components/SideBar'
+import GlobalStyles from '../styles/GlobalStyles';
+import Layout from '../components/Layout';
+import ProfileMain from '../components/Main/ProfileMain';
+import MenuBar from '../components/MenuBar';
+import SideBar from '../components/SideBar';
 
 const Profile: NextPage = () => {
   return (
@@ -17,10 +17,9 @@ const Profile: NextPage = () => {
       </Head>
 
       <GlobalStyles />
-      {/* <Layout /> */}
       
       <Layout>
-        <MenuBar />
+        <MenuBar active="Profile"/>
         <ProfileMain />
         <SideBar />
       </Layout>

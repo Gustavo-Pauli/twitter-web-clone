@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProfileMain from '../ProfileMain';
+import ProfileMain from '../Main/ProfileMain';
 import MenuBar from '../MenuBar';
 
 import { Container, Wrapper } from './styles';

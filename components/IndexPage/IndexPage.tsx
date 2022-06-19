@@ -21,7 +21,9 @@ const IndexPage: React.FC = () => {
             <div>
               <h3>Already have an account?</h3>
               <Link href='/profile' passHref>
-                <Button outlined>Sign in</Button>
+                <a>
+                  <Button outlined>Sign in</Button>
+                </a>
               </Link>
             </div>
           </Content>

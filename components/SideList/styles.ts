@@ -11,6 +11,7 @@ export const Item = styled.div`
   // padding: 10px 16px;
   // font-size: 15px;
   color: var(--primary);
+  transition-duration: 0.25s;
 
   + div {
     // border-top: 1px solid var(--outline);
