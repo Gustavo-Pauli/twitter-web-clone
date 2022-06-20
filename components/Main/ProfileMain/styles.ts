@@ -5,6 +5,8 @@ export const Container = styled.div`
 
 `;
 
+/*
+// Deprecated
 export const Header = styled.div`
   z-index: 2;
   position: sticky;
@@ -24,6 +26,43 @@ export const Header = styled.div`
     :hover {
       background:var(--button-hover);
     }
+  }
+`;
+*/
+
+export const BackButton = styled.a`
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-left: -6px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // outline: 0;
+  // padding: 8px;
+  cursor: pointer;
+  :hover {
+    background:var(--button-hover);
+  }
+`;
+
+export const Title = styled.div`
+  height: 53px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--gray);
   }
 `;
 

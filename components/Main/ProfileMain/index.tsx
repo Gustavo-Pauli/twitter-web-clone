@@ -1,25 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
 import ProfileHeader from '../../ProfileHeader';
-import { Container, Header, ProfileMiniHeader, BackIcon, BottomMenu, HomeIcon, ExploreIcon, NotificationsIcon, MessagesIcon} from './styles';
+import { Container, BackIcon, BottomMenu, HomeIcon, ExploreIcon, NotificationsIcon, MessagesIcon, Title, BackButton } from './styles';
 import { DefaultMainWrapper } from '../../../styles/GlobalStyledComponents';
 
 const ProfileMain: React.FC = () => {
   return (
     <DefaultMainWrapper>
       <Container>
-        <Header>
+        <Title>
           <Link href='/home' passHref>
-            <a>
+            <BackButton>
               <BackIcon />
-            </a>
+            </BackButton>
           </Link>
 
-          <ProfileMiniHeader>
-            <strong>Gustavo Pauli</strong>
-            <span>612 Tweets</span>
-          </ProfileMiniHeader>
-        </Header>
+          <div>
+            <h1>Gustavo Pauli</h1>
+            <h2>612 Tweets</h2>
+          </div>
+        </Title>
 
         <ProfileHeader />
 

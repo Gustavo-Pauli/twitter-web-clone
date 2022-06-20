@@ -1,14 +1,25 @@
 import React from 'react';
 
-import { Container, Header, Title } from './styles';
+import { Container, Header } from './styles';
 import { DefaultMainWrapper } from '../../../styles/GlobalStyledComponents';
+import { Title } from '../../../styles/GlobalStyledComponents';
+import TweetForm from '../../TweetForm';
+
 
 const HomeMain: React.FC = () => {
   return (
     <DefaultMainWrapper>
       <Container>
         <Header>
-          <Title>Home</Title>
+          <Title>
+            <div>
+              <h1>Home</h1>
+            </div>
+          </Title>
+
+          <TweetForm>
+
+          </TweetForm>
         </Header>
       </Container>
     </DefaultMainWrapper>
