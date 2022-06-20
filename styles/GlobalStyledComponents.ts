@@ -12,6 +12,7 @@ export const DefaultMainWrapper = styled.div`
   }
 `;
 
+/*
 export const Title = styled.div`
   height: 53px;
   width: 100%;
@@ -30,3 +31,4 @@ export const Title = styled.div`
     color: var(--gray);
   }
 `;
+*/

@@ -23,7 +23,7 @@ const TweetForm: React.FC = () => {
       <InputField>
         <TextBox>
           {/* <TextInput placeholder="What's happening?" /> */}
-          <TextArea placeholder="What's happening?"/>
+          <TextArea placeholder="What's happening?" maxHeight={367} />
         </TextBox>
         <ButtonsPanel>
           <Toolbar></Toolbar>

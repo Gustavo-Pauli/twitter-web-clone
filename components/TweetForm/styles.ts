@@ -32,7 +32,7 @@ export const TextBox = styled.div`
 
   > textarea {
     min-height: 56px;
-    max-height: 300px;
+    max-height: 367px;
     width: 100%;
     // height: 28px;
     color: var(--primary);
@@ -41,7 +41,7 @@ export const TextBox = styled.div`
     caret-color: var(--primary);
     resize: none;
     box-sizing: content-box;
-    overflow: auto;
+    overflow: hidden;
 
     ::placeholder {
       color: #71767B;

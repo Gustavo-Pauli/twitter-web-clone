@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Container, Header } from './styles';
 import { DefaultMainWrapper } from '../../../styles/GlobalStyledComponents';
-import { Title } from '../../../styles/GlobalStyledComponents';
+// import { Title } from '../../../styles/GlobalStyledComponents';
+import Title from '../../Title';
 import TweetForm from '../../TweetForm';
 
 
