@@ -1,4 +1,10 @@
-import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+  useMemo,
+} from "react";
 
 import {
   Container,
@@ -11,17 +17,25 @@ import {
 import Avatar from "../Avatar";
 import TextArea from "../TextArea";
 import IconButton from "../IconButton";
-import Media from "../../assets/icons/Media";
 import Button from "../Button";
+import Media from "../../assets/icons/Media";
+import GIF from "../../assets/icons/GIF";
+import Pool from "../../assets/icons/Pool";
+import Emoji from "../../assets/icons/Emoji";
+import Schedule from "../../assets/icons/Schedule";
+import TagLocation from "../../assets/icons/TagLocation";
+
 
 const TweetForm: React.FC = () => {
-  const [alreadyClicked, setAlreadyClicked] = useState(false);  // if was clicked at least once
+  const [alreadyClicked, setAlreadyClicked] = useState(false); // if was clicked at least once
   const [textAreaInput, setTextAreaInput] = useState("");
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
-  {/* const textAreaInput = useCallback(() => {
+  {
+    /* const textAreaInput = useCallback(() => {
     return textAreaRef.current?.value
-  }, [textAreaRef.current?.value]); */}
+  }, [textAreaRef.current?.value]); */
+  }
 
   return (
     <Container>
@@ -48,9 +62,21 @@ const TweetForm: React.FC = () => {
         <ButtonsPanel>
           <Toolbar>
             <IconButton iconFC={Media} color={"var(--twitter)"} />
+            <IconButton iconFC={GIF} color={"var(--twitter)"} />
+            <IconButton iconFC={Pool} color={"var(--twitter)"} />
+            <IconButton iconFC={Emoji} color={"var(--twitter)"} />
+            <IconButton iconFC={Schedule} color={"var(--twitter)"} />
+            <IconButton iconFC={TagLocation} color={"var(--twitter)"} />
           </Toolbar>
           <TweetButton>
-            <Button textColor="var(--primary)" bgColor="var(--twitter)" className={textAreaInput == "" ? "halfOpacity" : ""} onClick={() => {console.log("click")}}>
+            <Button
+              textColor="var(--primary)"
+              bgColor="var(--twitter)"
+              className={textAreaInput == "" ? "halfOpacity" : ""}
+              onClick={() => {
+                console.log("click");
+              }}
+            >
               Tweet
             </Button>
           </TweetButton>

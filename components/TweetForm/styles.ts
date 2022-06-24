@@ -102,6 +102,12 @@ export const ButtonsPanel = styled.div`
 `;
 
 export const Toolbar = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  > button {
+    margin-right: 0;
+  }
 `;
 
 export const TweetButton = styled.div`
