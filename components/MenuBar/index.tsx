@@ -12,7 +12,7 @@ import {
   NewTweetIcon,
   Avatar,
   LogoutIcon,
-  AcccountText,
+  AccountText,
  } from './styles';
 
 
@@ -94,10 +94,10 @@ const MenuBar: React.FC<Active> = ({ active }) => {
             <Avatar>
               <Image src='https://pbs.twimg.com/profile_images/1378854577001410561/TCoFz-6M_400x400.jpg' alt='Avatar'layout='fill' objectFit='cover'/>
             </Avatar>
-            <AcccountText>
+            <AccountText>
               <strong>Gustavo Pauli</strong>
               <span>@Gustavo_ps</span>
-            </AcccountText>
+            </AccountText>
             <LogoutIcon />
           </AccountSection>
         </a>

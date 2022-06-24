@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
 
 import {
   Container,
@@ -10,8 +10,19 @@ import {
 } from "./styles";
 import Avatar from "../Avatar";
 import TextArea from "../TextArea";
+import IconButton from "../IconButton";
+import Media from "../../assets/icons/Media";
+import Button from "../Button";
 
 const TweetForm: React.FC = () => {
+  const [alreadyClicked, setAlreadyClicked] = useState(false);  // if was clicked at least once
+  const [textAreaInput, setTextAreaInput] = useState("");
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+
+  {/* const textAreaInput = useCallback(() => {
+    return textAreaRef.current?.value
+  }, [textAreaRef.current?.value]); */}
+
   return (
     <Container>
       <Avatar
@@ -21,13 +32,28 @@ const TweetForm: React.FC = () => {
       />
 
       <InputField>
-        <TextBox>
-          {/* <TextInput placeholder="What's happening?" /> */}
-          <TextArea placeholder="What's happening?" maxHeight={367} />
+        <TextBox className={alreadyClicked ? "alreadyClicked" : ""}>
+          <TextArea
+            divRef={textAreaRef}
+            maxHeight={367}
+            placeholder="What's happening?"
+            callback={setTextAreaInput}
+            onFocus={() => {
+              if (!alreadyClicked) {
+                setAlreadyClicked(true);
+              }
+            }}
+          />
         </TextBox>
         <ButtonsPanel>
-          <Toolbar></Toolbar>
-          <TweetButton></TweetButton>
+          <Toolbar>
+            <IconButton iconFC={Media} color={"var(--twitter)"} />
+          </Toolbar>
+          <TweetButton>
+            <Button textColor="var(--primary)" bgColor="var(--twitter)" className={textAreaInput == "" ? "halfOpacity" : ""} onClick={() => {console.log("click")}}>
+              Tweet
+            </Button>
+          </TweetButton>
         </ButtonsPanel>
       </InputField>
     </Container>

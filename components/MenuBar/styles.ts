@@ -288,7 +288,7 @@ export const Avatar = styled.div`
   }
 `;
 
-export const AcccountText = styled.div`
+export const AccountText = styled.div`
   display: none;
   flex-direction: column;
   strong {

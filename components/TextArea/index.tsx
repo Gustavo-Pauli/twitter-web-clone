@@ -1,24 +1,29 @@
 import React, { ChangeEvent, HTMLAttributes } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Container } from "./styles";
 
 interface Args {
-  maxHeight?: number
+  divRef?: any;
+  maxHeight?: number;
+  callback: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const TextArea: React.FC<HTMLAttributes<HTMLTextAreaElement> & Args> = (props) => {
-  // const [rows, setRows] = useState(1);
-  // const rowHeight = 26;
-  // const margin = 8;
-  // const maxRows = 12
+  //const [textAreaInput, setTextAreaInput] = useState("");
   let showingScrollbar = false;
 
+
   function handleChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    // shrink to the minimum height
-    event.target.style.height = "1px";
+    props.callback(event.target.value);
+    // setTextAreaInput(event.target?.value);
+
+    event.target.style.height = "1px";  // shrink to the minimum height
     const areaHeight = event.target.scrollHeight;
-    event.target.style.height = areaHeight+"px";
-    console.log(areaHeight, " > ", props.maxHeight);
+
+    event.target.style.height = areaHeight+"px";  // set height
+    // debug
+    // console.log(areaHeight, " > ", props.maxHeight);
 
     // show scrollbar if needed
     if (props.maxHeight !== undefined) {
@@ -34,24 +39,15 @@ const TextArea: React.FC<HTMLAttributes<HTMLTextAreaElement> & Args> = (props) =
       }
     }
 
-
-
-    // const idealRows = Math.ceil((areaHeight - margin) / rowHeight);
-
-    /*
-    console.log(Math.ceil((areaHeight - margin) / rowHeight), areaHeight);
-
-    if (rows !== idealRows) {
-      setRows(idealRows);
-    }
-    */
-    
+    // console.log(event.target?.value);
+    // props.callback(textAreaInput);
+    // setTextAreaInput(event.target?.value);
   }
 
   // const element = <Container {...props} rows={rows} onChange={event => handleChange(event)}></Container>;
 
 
-  return <Container {...props} required onChange={event => handleChange(event)}></Container> ;
+  return <Container {...props} ref={props.divRef} required onChange={event => handleChange(event)}></Container> ;
 };
 
 export default TextArea;

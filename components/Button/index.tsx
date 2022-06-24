@@ -15,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   bgColor="var(--primary)",
   borderColor="var(--blue-gray)",
   children,
+  style,
   ...props 
  }) => {
   return (
